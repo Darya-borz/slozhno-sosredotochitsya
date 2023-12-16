@@ -3,6 +3,17 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root {
+    --rectangle-color: #FF0070;
+    --main-text-color: #F1B2CE;
+    --text-rectangle-color: #000028;
+    --title-color: #DB00FF;
+    --text-shadow-color: #FF0070;
+    --text-button-color: #FF0070;
+    --text-color: #FF0070;
+    --button-gap: 10px;
+    --padding: 10px;
+}
 
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
