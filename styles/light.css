@@ -32,7 +32,7 @@ root {
     --padding: 10px;
 }
 
-.theme_light .decor{
+.theme_light .decor {
     visibility: hidden;
 }
 
