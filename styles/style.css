@@ -9,17 +9,15 @@
     min-width: 375px;
 }
 
-.section {
-    margin-bottom: 40px;
-    padding: 10px;
-}
+
 
 .header {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr min-content 1fr;
+    grid-template-rows: repeat(3, 1fr);
     position: relative;
+    padding:10px;
 }
 
     .header::before {
@@ -39,18 +37,18 @@
         height: 25px;
         border-bottom: 1px solid var(--text-color);
         border-left: 1px solid var(--text-color);
-        inset-block-end: var(--padding);
+        inset-block-end: 40px;
     }
 
-main {
-    padding: 10px;
-    padding-top: 0;
+.main {
+    padding: 0 10px;
 }
 
-footer {
-    padding: 10px;
-    padding-top: 0;
+.section{
+    margin-top: 8px;
+    margin-bottom: 50px;
 }
+
 
 .decor {
     color: var(--decor-color);
@@ -87,7 +85,10 @@ footer {
     list-style-type: none;
     display: grid;
     row-gap: var(--button-gap);
+    margin-bottom:25px;
 }
+
+
 
 .header__theme-menu-button {
     color: var(--text-button-color);
@@ -128,6 +129,8 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 82.5%; /* 95.7px */
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .rectangle_cover_section {
@@ -144,11 +147,11 @@ footer {
 .cover_rectangle {
     max-width: 491px;
     max-height: 117px;
-    margin: 15px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 .rectangle_text {
-    margin-top: 20px;
+   
     color: var(--text-rectangle-color);
     font-family: "IBM Plex Mono", sans-serif;
     font-size: 18px;
@@ -157,6 +160,16 @@ footer {
     line-height: 23.4px;
 }
 
+.rectangle_text_bold_cover {
+    margin: 0;
+    color: var(--text-rectangle-color);
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23.4px; /* 130% */
+    
+}
 .rectangle_text_bold {
     margin: 0;
     color: var(--text-rectangle-color);
@@ -165,6 +178,7 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 23.4px; /* 130% */
+    margin-top: 20px;
 }
 
 .card-title-text {
@@ -211,7 +225,7 @@ footer {
 .image {
     margin-top: var(--padding);
     display: grid;
-    gap: 20px;
+    gap: 10px;
 }
 
 .tips-img {
@@ -226,6 +240,7 @@ footer {
     height: 100vh;
     position: relative;
     display: flex;
+    padding: 0 10px;
 }
 
     .footer::before {
@@ -286,9 +301,7 @@ footer {
 
 
 @media (width >= 768px) {
-    .cover_title {
-        margin-left: -20px;
-    }
+    
 
     :root {
         --padding: 20px;
@@ -336,24 +349,65 @@ footer {
         grid-column-end: 4;
     }
 
+    
+
+    
+}
+
+
+
+@media (width >= 768px) {
+    .title-section{
+        display: flex;
+        justify-content: flex-start;
+        align-self: center;
+    }
+    .cover_title {
+        margin-left: -30px;
+        margin-bottom: 45px;
+    }
+    .cover_rectangle {
+        margin: 10px -5px 0 0;
+        max-width: 364px;
+    }
+    header:before{
+        inset-block-start: var(--padding);
+    }
+    .decor{
+        top: 10px;
+    }
+    .header:after {
+        inset-block-end: 70px;
+        inset-inline-start: var(--padding);
+    }
+    .header__theme-menu{
+        align-self: flex-end;
+        margin-bottom: 55px;
+    }
     .first_section {
         display: grid;
         grid-template-columns: 1fr 2fr;
+        gap: 20px;
     }
-
+    .rectangle_text_bold{
+        margin:0;
+    }
+    .main-text{
+        margin-bottom: 20px;
+    }
+    .section{
+        margin-top: 10px;
+        margin-bottom: 60px;
+    }
+    .card-title-second-section {
+        margin-bottom: 20px;
+        width: 30%;
+    }
     .third_section {
         display: grid;
         grid-template-columns: 1fr 2fr;
-    }
-}
-
-@media (768px <= width < 1024px) {
-    .card-title-second-section {
-        width: 30%;
-    }
-
-    .cover_rectangle {
-        max-width: 364px;
+        gap: 20px;
+        margin-top: 80px;
     }
 }
 
@@ -371,6 +425,7 @@ footer {
     }
 
     .header__theme-menu-list {
+        align-self: flex-start;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
         margin: 0;
