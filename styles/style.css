@@ -434,5 +434,6 @@
 
     .cover_rectangle {
         max-height: 71px;
+        max-width: 491px;
     }
 }
