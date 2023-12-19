@@ -13,6 +13,9 @@
     --text-color: #FF0070;
     --button-gap: 15px;
     --padding: 10px;
+    --decor-color: #FF0070;
+    --decor_padding: 10px;
+    --button-border: rgba(255, 0, 112, 0.40);
 }
 
 .page.theme_dark {
@@ -20,4 +23,36 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+    background-color: #000028;
+    background-image: url(../images/cover-image-dark.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --rectangle-color: #FF0070;
+        --main-text-color: #F1B2CE;
+        --text-rectangle-color: #000028;
+        --title-color: #DB00FF;
+        --text-shadow-color: #FF0070;
+        --text-button-color: #FF0070;
+        --text-color: #FF0070;
+        --button-gap: 15px;
+        --padding: 10px;
+        --decor-color: #FF0070;
+        --decor_padding: 10px;
+        --button-border: rgba(255, 0, 112, 0.40);
+    }
+
+    .page {
+        background-color: #000028;
+        background-image: url(../images/cover-image-dark.png);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    
 }

@@ -13,4 +13,8 @@
     --button-gap: 15px;
     --padding: 10px;
     --decor-color: #FF0070;
+    --decor_padding: 10px;
+    --button-border: rgba(255, 0, 112, 0.40);
 }
+
+
