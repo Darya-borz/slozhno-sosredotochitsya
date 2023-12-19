@@ -493,6 +493,10 @@
     }
 
     .cover_rectangle {
+<<<<<<< HEAD
+=======
+        max-height: 71px;
+>>>>>>> cec5a9f983f2979f436bc332f7c016bc5762da06
         max-width: 491px;
     }
 }
