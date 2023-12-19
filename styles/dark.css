@@ -30,7 +30,7 @@
     background-attachment: fixed;
 }
 
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: dark) {
     :root {
         --rectangle-color: #FF0070;
         --main-text-color: #F1B2CE;
