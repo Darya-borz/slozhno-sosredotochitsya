@@ -13,7 +13,8 @@
 
 
 .header {
-    min-height: 100vh;
+    min-height: 668px;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -21,32 +22,29 @@
     padding: 10px;
 }
 
-    .header:before,
-    .header:after,
-    .footer:before,
-    .footer:after {
-        position: absolute;
-        content: "";
-        width: 25px;
-        height: 25px;
-        --decor_padding: 10px;
-    }
+.decorated-zone:before,
+.decorated-zone:after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    --decor_padding: 10px;
+}
 
-    .header:before,
-    .footer:before {
-        border-top: 1px solid var(--text-color);
-        border-right: 1px solid var(--text-color);
-        top: var(--decor_padding);
-        right: var(--decor_padding);
-    }
+.decorated-zone:before {
+    border-top: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+    top: var(--decor_padding);
+    right: var(--decor_padding);
+}
 
-    .header:after,
-    .footer:after {
-        border-bottom: 1px solid var(--text-color);
-        border-left: 1px solid var(--text-color);
-        bottom: var(--decor_padding);
-        left: var(--decor_padding);
-    }
+
+.decorated-zone:after {
+    border-bottom: 1px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
+    bottom: var(--decor_padding);
+    left: var(--decor_padding);
+}
 
 
 
@@ -122,10 +120,14 @@
         outline: 1px solid var(--button-border);
     }
 
+    .header__theme-menu-button:focus {
+        outline: none;
+    }
+
     .header__theme-menu-button:focus-visible {
         outline: none;
-        border: 1px solid transparent;
-        border-bottom: var(--text-button-color);
+        border: 0px solid transparent;
+        border-bottom: 1px solid var(--text-button-color);
     }
 
 .header__theme-menu-button_active {
@@ -233,7 +235,7 @@
         padding: 0px;
     }
 
-.gold_fish_section .group_section_card .rectangle .rectangle_text_bold {
+.gold_section .group_section_card .rectangle .rectangle_text_bold {
     margin-bottom: 20px;
 }
 
@@ -260,7 +262,8 @@
 }
 
 .footer {
-    min-height: 100vh;
+    min-height: 668px;
+    height: 100vh;
     position: relative;
     display: flex;
     padding: 0 10px;
@@ -293,6 +296,7 @@
 
     .header {
         padding: 20px;
+        min-height: 1024px;
     }
 
     .main {
@@ -301,6 +305,7 @@
 
     .footer {
         padding: 20px;
+        min-height: 1024px;
     }
 }
 
@@ -424,11 +429,11 @@
         margin-bottom: 20px;
     }
 
-    .gold_fish_section .group_section_card .rectangle .rectangle_text_bold {
+    .gold_section .group_section_card .rectangle .rectangle_text_bold {
         margin-bottom: 20px;
     }
 
-    .card-title-second-section {
+    .card-title-concentration_section {
         margin-bottom: 20px;
         width: 30%;
     }
@@ -437,7 +442,7 @@
         margin-bottom: 40px;
     }
 
-    .gold_fish_section {
+    .gold_section {
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 20px;
@@ -447,6 +452,14 @@
 }
 
 @media (width >= 1024px ) {
+    .header {
+        min-height: 768px;
+    }
+
+    .footer {
+        min-height: 768px;
+    }
+
     .rectangle_cover_section {
         margin-top: 10px;
     }
@@ -470,7 +483,7 @@
         gap: 20px;
     }
 
-    .gold_fish_section {
+    .gold_section {
         margin-top: 20px;
         gap: 10px;
     }
